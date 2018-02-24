@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructors</title>
+</head>
+<body>
+    <button id="meowButton">meowButton</button>
+    <script type="text/javascript">
+    /*
+
+      Objects in JS
+
+    */
+
+    var cat = {
+      nubmer: undefined,
+      sound: 'meow',         // свойство обьекта
+      talk: function(){      // Метод обьекта
+        console.log( this );
+        console.log( this.sound );
+      }
+    };
+
+    // var cat = {};
+    //     cat.number = undefined;
+    //     cat.sound = 'meow';
+
+    // console.log(cat);
+
+    var dog = {
+      sound: 'woof'
+    }
+    //
+    // var x = cat.talk;
+    // window.sound = "brbrbr";
+    // x();
+
+    // var myObj = {};
+    //     myObj.name = "Cat";
+    //     myObj.sound = "Hello";
+    //     myObj.sayName = function(){
+    //       console.log( this.sound + ' my name is ' + this.name);
+    //     }
+
+    // console.log( myObj );
+    // myObj.sayName();
+
+
+    var meowButton = document.getElementById('meowButton');
+        console.log( meowButton );
+        meowButton.addEventListener(
+          'click',
+          function( e ){
+            console.log( e );
+            console.log( this )
+          }
+        );
+
+
+      /*
+        Пример функции которая работает с this
+      */
+      function testThis(){
+        "use strict";
+        return this;
+      }
+      // console.log( testThis() );
+
+      // var x = {}
+      //     x.value = 13;
+      //     x.doSmsng = testThis;
+      //
+      //   console.log('return in obj', x.doSmsng());
+      // cat.walk = function(){
+      //   console.log('cat walk and say ' + this.sound);
+      // };
+      //
+      // console.log( cat );
+
+     // cat.walk()
+
+      //
+      // function talk(){
+      //   console.log( '1', this.sound );
+      // }
+      // talk();
+
+      // var boromir = {
+      //   speak: talk,
+      //   sound: "Нельзя просто так взять и..."
+      // };
+
+      // boromir.speak();
+      
+      // var gollum = {
+      //    blab: boromir.speak,
+      //    sound: "Моя прелесть...."
+      // };
+      // //
+      // gollum.blab();
+
+      /* 3 */
+      // Контекст выполнения this
+      // var Human = {
+      //   name: 'Ivan',
+      //   sayName: function(){
+      //     console.log( ' my name is ' + this.name );
+      //   },
+      //   personTwo: {
+      //     name: 'Petro',
+      //     sayName: function(){
+      //       console.log( ' my name is ' + this.name );
+      //     }
+      //   }
+      // };
+      //
+      // Human.sayName();
+      // Human.personTwo.sayName();
+
+		var Train = {
+			name: "Intercity",
+			speed: 160,
+			count: 440,
+			go: function() {
+				console.log("Поезд " + this.name + " везет " + this.count + " пасажира(ов) со скоростью " + this.speed);
+			},
+			stop: function() {
+				console.log("Поезд " + this.name + " остановился. Скорость " +  this.speed);
+			}
+		}
+		
+      /*
+	  
+        Задание:
+
+        Написать обьект Train у которого будут свойства:
+        -имя,
+        -скорость езды
+        -количество пассажиров
+        Методы:
+        Ехать -> Поезд {name} везет { количество пассажиров} со скоростью {speed}
+        Стоять -> Поезд {name} остановился. Скорость {speed}
+
+      */
+    </script>
+</body>
+</html>

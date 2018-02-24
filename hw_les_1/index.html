@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+       <meta charset="utf-8" />
+       <title>ITEA JS-ADVANCED</title>
+		<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap" id="app">
+    <button onClick="ChangeColor(event), viewColor()" data-color="red" data-width="500px" id="red_button">RED</button>
+    <button onClick="ChangeColor(event), viewColor()" data-color="blue">BLUE</button>
+    <button onClick="ChangeColor(event), viewColor()" data-color="green">GREEN</button>
+    
+    <button onClick="setColorRGB()" data-color="set">SetColorRGB</button>
+    <button onClick="setColorHEX()" data-color="set">SetColorHEX</button>
+
+    <div id="testAttr" name = "block" title = "Hello" data-height = "200"></div>
+
+    <div id="user">Users:</div>
+    <div class="container">
+      <ul id="list">
+        <li name="Dexter" class="test">Dexter</li>
+        <li id="JackLi">Jack</li>
+        <li >Jack2</li>
+      </ul>
+    </div>
+    <input onChange="LogChange" />
+    <div id="createArea">
+
+    </div>
+  </div>
+  <div id="test"></div>
+
+  <script src="main.js"></script>
+  <script>
+    function ChangeColor( event ){
+      var color = event.target.getAttribute('data-color');
+      document.body.style.background = color;
+    }
+  </script>
+</body>
+</html>

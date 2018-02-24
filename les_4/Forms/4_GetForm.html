@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <script>
+        window.addEventListener("load", function () {
+            var mainForm = document.getElementById('myForm');
+
+                //document.forms.myFormName // получить форму с именем
+                //document.forms.[0] // Получить форму по индексу
+
+                console.log( document.forms.myFormName );
+
+            var registration = document.getElementById("registration");
+
+            registration.addEventListener("click", function ( event ) {
+
+                event.preventDefault();
+                // console.log( document.forms.myFormName.elements );
+                //
+                // var myArrayCollection = Array.from(document.forms.myFormName.elements);
+                //
+                // console.log( myArrayCollection );
+                //
+                // myArrayCollection.forEach( function(item){
+                //   if( item.type !== 'submit'){
+                //     console.log( item.value );
+                //   }
+                //
+                // });
+                //
+                // mainForm.elements[0].value = "text";
+                // mainForm.elements[1].value = "text2";
+                // mainForm.elements[2].value = "text3";
+
+                  console.log( mainForm.elements.v2.value );
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <form name="form1"></form>
+    <form name="form2"></form>
+    <form id="myForm" name="myFormName">
+        <label>Имя <input type="text" placeholder="You value" name="v3"/></label>
+        <label>Фамилия<input type="text" value="2" name="v1" /></label>
+        <label>Возраст<input type="text" value="3" name="v2"/></label>
+        <input type="submit" value="Регистрация" id="registration" />
+    </form>
+
+
+</body>
+</html>

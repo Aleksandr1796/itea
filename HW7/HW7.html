@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructors</title>
+    <script src="../moments-with-locales.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="wrap">
+    <header>
+      <form>
+        <label for="author">
+          <span>Author</span>
+          <select id="author" name="author">
+            <option value="Taras Shevchenko">Taras Shevchenko</option>
+            <option value="Ivan Franko">Ivan Franko</option>
+            <option value="Vasyl Stys">Vasyl Stys</option>
+            <option value="Oles Gonchar">Oles Gonchar</option>
+          </select>
+        </label>
+
+        <label for="message">
+          <span>Message</span>
+          <textarea placeholder="Your Message" id="message"></textarea>
+        </label>
+        <button type="submit" id="button">Send</button>
+      </form>
+    </header>
+
+    <section>
+      <ul id ="answers">
+        <li>
+            <div class="message__date">
+              5 лютого 2018 р.
+            </div>
+            <div class="message__author">
+              <b>Ivan Franko</b>
+            </div>
+            <div class="message__text">
+              Ночі безмірнії, ночі безсоннії...
+            </div>
+            <div class="message__controls">
+              <button class="_skipMessage" id="skip">Skip</button>
+              <button class="_answerMessage" id="answer">Answer</button>
+            </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!--
+    Задание на классы.
+
+    Создать класс Message конструктор котрого состоит из следующих полей:
+    id, author, text, date, answers
+
+    У этого класса будет два метода:
+    SkipMessage() -> которое должно найти сообщение и удалить его из массива.
+    AnswerMessage()-> должно отрыть поле ввода, в который вы сможете ввести ответ
+    SendAnswer() -> метод который «отравляет» ответ, при этом апдейча роле ответа в вашем объекте с сообщением.
+
+    В метод SendAnswer нужно передать обьект класса Answer который наследуется от класса Message,
+    Но еще дополнительно будет иметь поле parentId.
+
+
+    После создании сообщение добавляется в массив со всеми сообщениями, которые потом будут выводится на экран.
+
+    _ _ _
+
+    Задание можно разбелить на две части:
+      1. Создание самого сообщения:
+      id->выдаётся автоматом
+      Author-> селект с выбором автора
+      Text -> текст сообщения
+      date -> автоматически в момент создания
+
+      Все данные беруться с формы. Массив с сообщениями передается в функцию рендера, которая генерирует сам список.
+
+      2. Ответ на сообщение
+
+  -->
+<script>
+
+
+let authorSelect = document.getElementById('author');
+    messageText = document.getElementById('message');
+    submit = document.getElementById('button');
+
+
+let now = moment();
+now.locale('uk');
+
+class Message{
+  constructor(id, author, text, date, answers){
+    this.id = id;
+    this.author = authorSelect.value;
+    this.text = messageText.value;
+    this.date =`${now.format('LL')}`;
+  }
+}
+
+
+let allMessages = [];
+let answerBlock = document.getElementById('answers');
+
+    submit.addEventListener('click', function(e){
+    e.preventDefault();
+    if(messageText.value){
+      let newMessage = new Message();
+      allMessages.push(newMessage);
+
+      function renderMessages(arr){
+        let message = answerBlock.appendChild(document.createElement('li'));
+        let time = document.createElement('div');
+
+            time.classList.add("message__date");
+            time.innerHTML = newMessage.date;
+            message.appendChild(time);
+
+        let author = document.createElement('div');
+
+            author.classList.add("message__author");
+            author.innerHTML = newMessage.author;
+            message.appendChild(author);
+
+        let text = document.createElement('div');
+
+            text.classList.add("message__text");
+            text.innerHTML = newMessage.text;
+            message.appendChild(text);
+
+        let controls = document.createElement('div');
+
+            controls.classList.add("message__controls");
+            let skipButton = document.createElement('button');
+                skipButton.innerHTML = 'Skip';
+                controls.appendChild(skipButton);
+            let answerButton = document.createElement('button');
+                answerButton.innerHTML = 'Answer';
+                controls.appendChild(answerButton);
+            message.appendChild(controls);
+
+      }
+      renderMessages(allMessages);
+      messageText.value='';
+    }
+  });
+
+
+
+
+</script>
+
+
+</body>
+</html>

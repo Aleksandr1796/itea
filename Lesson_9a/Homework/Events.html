@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+      <div id="app">
+        <div>
+          <input id="mainInput" placeholder="Введите текст сюда"/>
+          <div id="mainInputCount"></div>
+        </div>
+
+        <div>
+          <button id="unlock" disabled>Разблокировать и очистить</button>
+          <button id="save" type="submit">Сохранить данные</button>
+        </div>
+
+      </div>
+      <script>
+        /*
+          Задание:
+          На повториние материала по EventListeners
+
+          Нунжо повесить 3 обработчика
+          1. На mainInput на событие input/change - проверка длинны введенного текста.
+
+          Если длина меньше 30 символов, вешать класс valid. При этом на кнопке
+          save должен висеть обработчик который иммитирует созранение данных. (см. пункт 3.)
+
+          Если длинна больше 30 символов то вешать на инпут класс с ошибкой error
+          который будет выделять элемент красной обводкой.
+
+          Если длинна начинает превышать 40 символов, вешать на инпут
+          аттрибут disabled, а на кнопку unlock обработчик разблокировки и
+          убирать атрибут dissabled (см. пункт 2.)
+
+          Бонусы:
+            + По мере ввода считать количество символов и выводить в блок mainInputCount
+
+          2. На unlock повесить обработчик click, который очищает инпут и убирает с него
+          атрибут disabled. Так же снимает с себя обработчик который появился при
+          превышении лимита 40 символов. Кнопка делает себя неактивной после нажатия.
+
+          3. На save повесить обработчик click который получает данные с mainInput
+          и выводит их в коносольку.
+          Если длинна больше не обходимого, то обработчик отправки убирается и на
+          кнопку вешается атрибут disabled.
+
+        */
+		  document.getElementById("mainInput").addEventListener('input', CheckText);
+		  document.getElementById("unlock").addEventListener('click', Unlock);
+		  document.getElementById("save").addEventListener('click', Save);
+		  function CheckText(e) {
+			  if(this.value.length < 30) {
+				  document.getElementById('mainInput').className = 'valid';
+			  }
+			  if(this.value.length >= 30 && this.value.length < 40) {
+				  document.getElementById('mainInput').className = 'error';
+			  }
+			  if(this.value.length >= 40) {
+				  this.setAttribute('disabled', true);
+				  document.getElementById('unlock').removeAttribute('disabled');
+			  }
+		  }
+		  function Unlock() {
+			  document.getElementById('mainInput').value = "";
+			  document.getElementById('mainInput').removeAttribute('disabled');
+		  }
+		  function Save() {
+			  document.getElementById('mainInput').value = "";
+			  document.getElementById('mainInput').removeAttribute('disabled');
+		  }
+      </script>
+</body>
+</html>

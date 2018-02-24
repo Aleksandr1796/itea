@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+ <head>
+       <meta charset="utf-8" />
+       <title>Бизнес-гид</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+       <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&amp;subset=cyrillic" rel="stylesheet">
+
+       <link href="css/normalize.css" rel="stylesheet">
+       <link href="css/style.min.css" rel="stylesheet">
+
+       <!-- favicon -->
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+      <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+      <link rel="manifest" href="/images/favicon/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <header class="mainHeader">
+    <div class="mainHeader__innerWrap">
+
+        <a href="/" class="mainHeader__logo"></a>
+
+      <div class="mainHeader__category">
+        <div class="mainHeader__categoryButton">Категории</div>
+        <div class="categorySelector">
+
+        </div>
+      </div>
+
+      <div class="mainHeader__locationSelector">
+        <div class="mainHeader__locationButton">
+          Весь мир
+        </div>
+      </div>
+
+      <div class="mainHeader__searchContainer">
+        <input
+          type="text"
+          class="mainHeader__searchInput"
+          placeholder="Что вы ищите?"
+        />
+        <div class="mainHeader__searchType">
+          <div class="mainHeader__searchTypeSelected">Продукты</div>
+          <div class="mainHeader__searchTypeSelector dsp-none">
+          </div>
+        </div>
+        <button class="mainHeader__searchButton"></button>
+      </div> <!-- search container -->
+
+      <div class="mainHeader__userNotificationArea">
+
+        <div class="mainHeader__notificationIcons notAutorized">
+          <!-- <div class="mainHeader__notificationMessages notifyIcon"></div> -->
+          <div class="mainHeader__notificationCart notifyIcon">
+            <div class="mainHeader__notificationCounter">1</div>
+          </div>
+        </div>
+        <div class="mainHeader__userAccount">
+          <!-- <div class="mainHeader__userIdentifier">
+            <div class="mainHeader__userType human"></div>
+            <div class="mainHeader__userName">Андрей Даценко</div>
+          </div>
+          <div class="mainHeader__UserSettings"></div> -->
+          <div class="mainHeader__userLoginContainer">
+            <a href="#" class="mainHeader__userLogin">Войти</a>
+            <a href="#" class="mainHeader__userSignUp">Зарегистрироваться</a>
+
+          </div>
+        </div>
+
+
+      </div> <!-- user notification -->
+
+    </div>
+  </header>
+  <div class="wrap">
+    <header class="product__header">
+      <div class="breadcrumbs">
+        <a href="/">bg.ua</a> /
+        <a href="compnay.html">Інтернет магазин Степной, Племзавод</a> /
+        <a href="catalog.html">Підкатегорія продуктів</a> /
+        <a>Ще одна підкатегорія</a>
+      </div>
+    </header>
+
+    <div class="aboutCompanyCard__container" tabindex="0">
+      <a
+        class="aboutCompanyCard__logo"
+        href="company.html">
+        <img src="/images/companies/companyLogos-01.png" />
+      </a>
+      <div class="aboutCompanyCard__data">
+        <div class="aboutCompanyCard__ranked">
+          <a
+            class="aboutCompanyCard__nameContainer"
+            href="company.html">
+            <h2>СТЕПНОЙ, ПЛЕМЗАВОД, ПАТ</h2>
+            <span>С. Заповитне</span>
+          </a>
+          <div class="aboutCompanyCard__reviews">
+            <div class="aboutCompanyCard__reviewsImage"></div>
+            <div class="aboutCompanyCard__reviewsText">
+              <b>100%</b> позитивних відгуків з <b>258</b> за останній рік
+            </div>
+          </div>
+        </div>
+        <div class="aboutCompanyCard__interaction">
+          <button href="#" class="button button__action">Написать сообщение</button>
+          <button href="#" class="button button__subAction">Написать отзыв</button>
+        </div>
+      </div>
+    </div> <!-- company card -->  
+
+    <div class="productPage">
+      <div class="productPage__imageBlock">
+        <div class="productPage__gallery">
+          <div class="productPage__mainImage">
+            <img src="/images/products/full1.jpeg" />
+          </div>
+          <div class="productPage__thumbnailsContainer">
+            <div class="productPage__thnumbnail"><img src="/images/products/product1.jpg" /></div>
+            <div class="productPage__thnumbnail"><img src="/images/products/product2.jpg" /></div>
+            <div class="productPage__thnumbnail"><img src="/images/products/product3.jpg" /></div>
+          </div>
+        </div>
+      </div> <!-- image block -->
+
+      <div class="productPage__dataBlock">
+        <header class="productPage__header">
+          <div class="productPage__avialibleContainer">
+            <div class="productPage__avialibleStatus available">
+              В наличии
+            </div>
+          </div>
+          <div class="productPage__code">
+            Код товара: 01042
+          </div>
+        </header>
+        <header class="productPage__title">
+          <h1>Выращивание зерновых, технических и прочих культур, не отнесенных к другим</h1>
+        </header>
+
+        <div class="productPage__sectionHead">
+            <div class="productPage__sectionTitle">Варианты товара</div>
+        </div>
+        <div class="productPage__productVariables">
+          <div class="productPage__productVariable active">
+            <div class="productPage__productVariableImage"><img src="/images/products/pea_icon.jpg" /></div>
+            <div class="productPage__productVariableText">Горох</div>
+          </div>
+          <div class="productPage__productVariable">
+            <div class="productPage__productVariableImage"><img src="/images/products/sun_icon.jpg" /></div>
+            <div class="productPage__productVariableText">Масло</div>
+          </div>
+          <div class="productPage__productVariable">
+            <div class="productPage__productVariableImage"><img src="/images/products/Corn_icon.jpg" /></div>
+            <div class="productPage__productVariableText">Кукуруза</div>
+          </div>
+          <div class="productPage__productVariable">
+            <div class="productPage__productVariableImage"><img src="/images/products/honey_icon.jpg" /></div>
+            <div class="productPage__productVariableText">Мёд</div>
+          </div>
+        </div>
+
+        <div class="productPage__priceContainer">
+          <div class="productPage__price">
+            <div class="productPage__price-Old"><span>1500 грн / т.</span></div>
+            <div class="productPage__price-Sale">1400 грн / т.</div>
+          </div>
+          <div class="productPage__buyButtonContainer">
+            <a href="#" class="productPage__buyButton">Купить</a>
+          </div>
+        </div> <!-- price container -->
+
+        <div class="productPage__description">
+          <div class="productPage__sectionHead">
+              <div class="productPage__sectionTitle">Описание</div>
+          </div>
+          <div class="productPage__descriptionBody">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="productPage__descriptionBadges">
+
+          </div>
+        </div> <!-- description -->
+
+        <div class="productComments" id="productComments">
+          <div class="productPage__sectionHead">
+              <div class="productPage__sectionTitle">Комментарии</div>
+          </div>
+          <div class="productComments__container">
+
+              <div class="Comment">
+                  <div class="Comment__body">
+                    <header class="Comment__header">
+                        <div class="Comment__username">
+                            Боб Финик
+                        </div>
+                        <div class="Comment__headerPart">
+                          <div class="Comment__date">
+                              21.04.2017
+                          </div>
+                          <a href="#" class="Comment__link"></a>
+                        </div>
+                          <a href="#" class="Comment__response">Ответить</a>
+                    </header>
+                    <div class="Comment__text">
+                      Поменял старый 5200 RPM HDD на эту штуку. Ноут, как говорится, обрел вторую жизнь.
+                      Полный бут за 8-10 секунд, выключение за 5(раньше 15-20).
+                      Интерфейс винды 10 летает просто. Меньше всяких тупняков связанных с перегрузом жесткого диска.
+                      Если у вас на ноутбуке HDD и вы на нём работаете - SSD для вас маст хев.
+                    </div>
+                  </div>
+                  <div class="Comment__Answers">
+                    <div class="Comment__body">
+                      <header class="Comment__header">
+                          <div class="Comment__username">
+                              Боб Финик
+                          </div>
+                          <div class="Comment__headerPart">
+                            <div class="Comment__date">
+                                21.04.2017
+                            </div>
+                            <a href="#" class="Comment__link"></a>
+                          </div>
+                            <a href="#" class="Comment__response">Ответить</a>
+                      </header>
+                      <div class="Comment__text">
+                        Артур, попробуйте обновить видеокодеки, драйвера звуковой карты, а также попробуйте запустить фильм из другого браузера (если вы смотрите онлайн видео), например Google Chrome или Opera. Также такие проблемы возможны при воспроизведении видео в разрешении 4К и выше. Если все описанное выше не поможет, пожалуйста обратитесь в СЦ для диагностики:
+
+                      </div>
+                    </div>
+                  </div>
+              </div> <!-- comment -->
+
+              <div class="Comment">
+                  <div class="Comment__body">
+                    <header class="Comment__header">
+                        <div class="Comment__username">
+                            Боб Финик
+                        </div>
+                        <div class="Comment__headerPart">
+                          <div class="Comment__date">
+                              21.04.2017
+                          </div>
+                          <a href="#" class="Comment__link"></a>
+                        </div>
+                        <a href="#" class="Comment__response">Ответить</a>
+                    </header>
+                    <div class="Comment__text">
+                      Поменял старый 5200 RPM HDD на эту штуку. Ноут, как говорится, обрел вторую жизнь.
+                      Полный бут за 8-10 секунд, выключение за 5(раньше 15-20).
+                      Интерфейс винды 10 летает просто. Меньше всяких тупняков связанных с перегрузом жесткого диска.
+                      Если у вас на ноутбуке HDD и вы на нём работаете - SSD для вас маст хев.
+                    </div>
+                  </div>
+              </div> <!-- comment -->
+
+          </div> <!-- comments container -->
+
+        </div> <!-- product comments -->
+
+      </div> <!-- data block -->
+
+
+      <div class="productCharacteristics">
+          <div class="productPage__sectionHead">
+              <div class="productPage__sectionTitle">Характеристики</div>
+          </div>
+
+          <div class="productCharacteristics__container" id="product__characteristics">
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Дисплей (диагональ) </div>
+                  <div class="productCharacteristics__itemDescription">13,3 </div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Дисплей (разрешение) </div>
+                  <div class="productCharacteristics__itemDescription">440x900 - WXGA+  </div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Процессор (модель) </div>
+                  <div class="productCharacteristics__itemDescription"> Intel Core i5 Процессор  ГГц: 1,6 - 2,7</div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle"> Оперативная память (объем) </div>
+                  <div class="productCharacteristics__itemDescription">МБ: 8192  </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">SSD 120 GB </div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">ipt со специальным синтаксисом» </div>
+              </div>
+
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle"> Оперативная память (объем) </div>
+                  <div class="productCharacteristics__itemDescription">МБ: 8192  </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">SSD 120 GB </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Процессор (модель) </div>
+                  <div class="productCharacteristics__itemDescription"> Intel Core i5 Процессор  ГГц: 1,6 - 2,7</div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Дисплей (диагональ) </div>
+                  <div class="productCharacteristics__itemDescription">13,3 </div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Процессор (модель) </div>
+                  <div class="productCharacteristics__itemDescription"> Intel Core i5 Процессор  ГГц: 1,6 - 2,7</div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle"> Оперативная память (объем) </div>
+                  <div class="productCharacteristics__itemDescription">МБ: 8192  </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">SSD 120 GB </div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">ipt со специальным синтаксисом» </div>
+              </div>
+
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle"> Оперативная память (объем) </div>
+                  <div class="productCharacteristics__itemDescription">МБ: 8192  </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">SSD 120 GB </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Процессор (модель) </div>
+                  <div class="productCharacteristics__itemDescription"> Intel Core i5 Процессор  ГГц: 1,6 - 2,7</div>
+              </div>
+
+              <!-- <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Дисплей (диагональ) </div>
+                  <div class="productCharacteristics__itemDescription">13,3 </div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Процессор (модель) </div>
+                  <div class="productCharacteristics__itemDescription"> Intel Core i5 Процессор  ГГц: 1,6 - 2,7</div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle"> Оперативная память (объем) </div>
+                  <div class="productCharacteristics__itemDescription">МБ: 8192  </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">SSD 120 GB </div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">ipt со специальным синтаксисом» </div>
+              </div>
+
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle"> Оперативная память (объем) </div>
+                  <div class="productCharacteristics__itemDescription">МБ: 8192  </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Тип диска</div>
+                  <div class="productCharacteristics__itemDescription">SSD 120 GB </div>
+              </div>
+
+               <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Процессор (модель) </div>
+                  <div class="productCharacteristics__itemDescription"> Intel Core i5 Процессор  ГГц: 1,6 - 2,7</div>
+              </div>
+
+              <div class="productCharacteristics__item">
+                  <div class="productCharacteristics__itemTitle">Дисплей (диагональ) </div>
+                  <div class="productCharacteristics__itemDescription">13,3 </div>
+              </div> -->
+
+          </div>
+
+          <div class="productCharacteristics__showAllContainer">
+              <a class="productCharacteristics__showAll" id="product__ShowCcharacteristics">
+                  Показать все характеристики
+              </a>
+          </div>
+      </div> <!-- productCharacteristics -->
+
+
+    </div> <!-- product page -->
+
+
+    <div class="productPage__sameProducts">
+      <div class="productPage__sectionHead">
+          <div class="productPage__sectionTitleBig">Похожие товары</div>
+      </div>
+
+      <div class="catalog__productsContainer">
+      <a class="product" href="/product.html">
+        <div class="product__image"><img src="/images/products/product3.jpg"/></div>
+        <div class="product__title">Масло сырое подсолнечное</div>
+        <div class="product__availability waitingDelivery">
+          <div class="product__availabilityStatus"></div>
+          <div class="product__availabilityText">Заканчивается</div>
+        </div>
+        <div class="product__priceContainer">
+          <div class="product__price">50 грн / кг</div>
+          <div class="product__priceSale"></div>
+        </div>
+
+        <div class="product__buyButton">Купить</div>
+      </a>
+
+      <div class="product">
+        <div class="product__image"><img src="/images/products/product2.jpg"/></div>
+        <div class="product__title">Мед</div>
+        <div class="product__availability stock">
+          <div class="product__availabilityStatus"></div>
+          <div class="product__availabilityText">В наличии</div>
+        </div>
+        <div class="product__priceContainer">
+          <div class="product__price">50 грн / кг</div>
+          <div class="product__priceSale"></div>
+        </div>
+        <div class="product__buyButton">Купить</div>
+      </div>
+
+      <div class="product">
+        <div class="product__image"><img src="/images/products/product1.jpg"/></div>
+        <div class="product__title">Горох</div>
+        <div class="product__availability outOfStock">
+          <div class="product__availabilityStatus"></div>
+          <div class="product__availabilityText">Не в наличии</div>
+        </div>
+        <div class="product__priceContainer">
+          <div class="product__price">50 грн / кг</div>
+          <div class="product__priceSale"></div>
+        </div>
+        <div class="product__buyButton">Купить</div>
+      </div>
+
+      <div class="product">
+        <div class="product__image"><img src="/images/products/product5.jpg"/></div>
+        <div class="product__title">Мед</div>
+        <div class="product__availability waitingDelivery">
+          <div class="product__availabilityStatus"></div>
+          <div class="product__availabilityText">Ожидается поставка</div>
+        </div>
+        <div class="product__priceContainer">
+          <div class="product__price">50 грн / кг</div>
+          <div class="product__priceSale"></div>
+        </div>
+        <div class="product__buyButton">Купить</div>
+      </div>
+
+      <div class="product">
+        <div class="product__image"><img src="/images/products/product6.jpg"/></div>
+        <div class="product__title">Детский конструктор WOODBUILDER</div>
+        <div class="product__availability stock">
+          <div class="product__availabilityStatus"></div>
+          <div class="product__availabilityText">В наличии</div>
+        </div>
+        <div class="product__priceContainer">
+          <div class="product__price">50 грн / кг</div>
+          <div class="product__priceSale"></div>
+        </div>
+        <div class="product__buyButton">Купить</div>
+      </div>
+
+    </div> <!-- products container -->
+    </div>
+
+  </div>
+  <footer class="footer">
+    <div class="footer__Container">
+      <div class="footer__wrap">
+
+        <div class="footer__item">
+          <header class="footer__itemHeader">
+            <div>
+              Покупателям
+            </div>
+          </header>
+          <div class="footer__itemContainer">
+            <a href="#" class="footer__itemLink">Как покупать на bg.ua</a>
+            <a href="#" class="footer__itemLink">Как оставить полезный отзыв</a>
+            <a href="#" class="footer__itemLink">Рекомендации по безопасным покупкам</a>
+            <a href="#" class="footer__itemLink">Контакты</a>
+          </div>
+        </div>
+
+        <div class="footer__item">
+          <header class="footer__itemHeader">
+            <div>
+              Продавцам
+            </div>
+          </header>
+          <div class="footer__itemContainer">
+            <a href="#" class="footer__itemLink">Как продавать на bg.ua</a>
+            <a href="#" class="footer__itemLink">Тарифы</a>
+            <a href="#" class="footer__itemLink">Отзывы клиентов bg.ua</a>
+            <a href="#" class="footer__itemLink">Рейтинг компаний по посещениям</a>
+          </div>
+        </div>
+
+        <div class="footer__item">
+          <header class="footer__itemHeader">
+            <div>
+              Компаниям
+            </div>
+          </header>
+          <div class="footer__itemContainer">
+            <a href="#" class="footer__itemLink">Пользовательское соглашение </a>
+            <a href="#" class="footer__itemLink">Политика конфиденциальности</a>
+            <a href="#" class="footer__itemLink">Правила пользования порталом</a>
+            <a href="#" class="footer__itemLink">Руководство AdWords</a>
+          </div>
+        </div>
+
+
+        <div class="footer__item">
+          <header class="footer__itemHeader">
+            <div>
+              О нас
+            </div>
+          </header>
+          <div class="footer__itemContainer">
+            <a href="#" class="footer__itemLink">О Бизнес Гиде </a>
+            <a href="#" class="footer__itemLink">СМИ о нас</a>
+            <a href="#" class="footer__itemLink">Справка и FAQ</a>
+            <a href="#" class="footer__itemLink">Администрация</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructors</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Функция-конструктор для создания объекта Human.
+
+        // function Human(name, surname) {
+        //     this.name = name;
+        //     this.surname = surname;
+        // }
+        //
+        // // Создание 2 экземпляров класса Human
+        // //
+        // var firstHuman = new Human("Ivan", "Ivanov");
+        // var secondHuman = new Human("Petr", "Petrov");
+        // //
+        // console.log(firstHuman);
+        // console.log(secondHuman);
+
+        // Функция-конструктор для создания объекта Human.
+        //
+        function Human(name, surname) {
+            this.name = name;
+            this.surname = surname;
+            this.myProp = "asdasd";
+
+            this.showName = function () {
+                document.write("имя человека: " + this.name + " " + this.surname );
+            }
+        }
+        //
+        // // Создание 2 экземпляров класса Human
+        //
+        var firstHuman = new Human("Ivan", "Ivanov");
+        var secondHuman = new Human("Petr", "Petrov");
+        //
+//        firstHuman.showName();
+//        secondHuman.showName();
+
+
+        // var myDog = new Dog('Имя', "Порода");
+        //     myDog.run();
+        //
+        // var myDog2 = new Dog('Имя2', "Порода2");
+        //     myDog2.run();
+		
+		function Dog(name, kind) {
+			this.name = name;
+			this.kind = kind;
+			this.status = "";
+			this.go = function() {
+				this.status = this.name + " GO!";
+				console.log(this.status);
+			}
+			this.eat = function() {
+				this.status = this.name + " Eat!";
+				console.log(this.status);
+			}
+			this.allProp = function() {
+				for(p in this) {
+					console.log(p, this[p]);
+				}
+			}
+		}
+		
+		var dog1 = new Dog("Khatiko", "Mops");
+      /*
+
+		
+        Задание:
+
+        1. Создать ф-ю констурктор которая создаст новую собаку у которой есть имя и порода
+        2. Обьект должен иметь пару свойств (Имя, порода)
+        3. Функцию которая производит манипуляцию со свойствами (Собака бежит), (Собака есть)
+        4. Функция которая перебором выводит все свойства
+
+        // Перебор свойств и методов обьекта
+        for (key in obj) {
+          console.log( key, obj[key] );
+          /* ... делать что-то с obj[key] ... */
+        // }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+	background-color: #e7e8ea;
+}
+
+.main {
+	width: 95%;
+	height: 500px;
+	margin: 30px auto;
+}
+
+#left {
+	width: 70%;
+	min-height: 500px;
+	float: left;
+	background-color: white;
+	margin-right: 2%;
+	padding-bottom: 20px;
+}
+
+#right {
+	width: 28%;
+	min-height: 500px;
+	float: left;
+	background-color: white;
+}
+
+ul li {
+	font-size: 20px;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+
+#right p {
+	padding: 10px 15px;
+}
+
+#right p:hover {
+	background-color: #d1d2d4;
+	cursor: pointer;
+}
+
+#submit {
+	background-color: #8cc63e;
+}
+
+#reset {
+	background-color: #f44336;
+}
+
+#inputText,
+#inputArea {
+	margin: 10px 5%;
+	padding: 5px 10px;
+	width: 60%;
+}
+
+#inputAreaCols,
+#inputAreaRows,
+#inputSelectOptVal,
+#inputSelect,
+#inputSelectOptName,
+#inputRadioOptVal,
+#inputRadio,
+#inputRadioOptName,
+#inputRadioLabel,
+#mailInput,
+#passInput {
+	margin: 10px 5%;
+}
+
+#butt_add_text {
+	width: 100%;
+	height: 35px;
+	border: 0;
+	background-color: #8cc63e;
+}
+
+#butt_add_area {
+	width: 100%;
+	height: 35px;
+	border: 0;
+	background-color: #8cc63e;
+}
+
+#butt_add_selectOpt {
+	margin: 10px;
+	border: 0;
+	background-color: #8cc63e;
+}
+
+#butt_add_radioOpt {
+	margin: 10px;
+	padding: 5px;
+	padding-right: 7px;
+	border: 0;
+	background-color: #8cc63e;
+}
+
+#butt_add_select,
+#butt_add_radio,
+#butt_add_date,
+#butt_add_color,
+#butt_add_mail,
+#butt_add_pass {
+	width: 100%;
+	height: 35px;
+	border: 0;
+	background-color: #8cc63e;
+}
+
+#showhidetext,
+#showhidetextarea,
+#showhideselect,
+#showhideradio,
+#showhidedate,
+#showhidecolor,
+#showhidemail,
+#showgidepass,
+#showhidepass {
+	background-color: #d1d2d4;
+	display: none;
+}
+
+.leftText {
+	background-color: #e7e8ea;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 200px;
+	padding: 5px;
+	border: 1px solid #d1d2d4;
+	border-radius: 5px;
+	display: block;
+}
+
+.leftArea {
+	background-color: #e7e8ea;
+	margin-top: 20px;
+	margin-left: 20px;
+	padding: 5px;
+	border: 1px solid #d1d2d4;
+	border-radius: 5px;
+	display: block;
+}
+
+.select,
+.selTitle,
+.radTitle,
+#dateTab,
+.dateRes,
+#colorTab,
+.mailTitle,
+.passTitle {
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#colorTab,
+#dateTab,
+.radTitle {
+	margin-bottom: 10px;
+}

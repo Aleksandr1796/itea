@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructors</title>
+</head>
+<body>
+    <!-- <script src="let_const.js"></script> -->
+    <script type="text/javascript">
+    /*
+
+      Prototypes
+
+    */
+
+    function talk(){
+      console.log( this.sound );
+    }
+
+    var animal = {
+      talk,
+      // тоже самое что и talk: talk
+    };
+
+    var cat = {
+      sound: 'meow',
+    };
+		
+    // cat.talk();
+
+    Object.setPrototypeOf( cat, animal );
+    console.log( cat );
+    cat.talk();
+
+    // console.log( cat ); // Посмотрим что у нас находиться в обьектк cat
+    
+
+    var dog = {
+      sound: 'woof'
+    };
+    
+    Object.setPrototypeOf( dog, animal );
+    dog.talk();
+		
+		
+		
+	function data(type, sound) {
+		this.type = type,
+		this.sound = sound,
+		this.parentMathod = function() {
+			  console.log("animal " + this.type + " say " + this.sound);
+		  }
+	}
+	
+	function x() {
+		this.parentMathod = function() {
+			  console.log("ParentMethod");
+		  }
+	}
+		var y = new x();
+		var d = new data("Cat", "Meaw");
+	Object.setPrototypeOf(data, x);
+		
+	function checkProto(obj) {
+		var protObj = this.prototype;
+	}
+
+
+	checkProto(d);
+	
+    /*
+
+      Написать функцию конструктор на прототипе:
+
+        Есть функция x, задача создать конструктор
+        который будет выдавать обьекты которые имеют
+        этот же метод через проотипное наследование.
+
+        var data = {
+          type: "",
+          sound: ""
+        }
+        new Func(data){
+        data: '',
+        __proto__ : {
+          parentMethod: function(){
+            console.log(' animal XX say YY');
+          }
+        }
+      }
+
+    */
+    </script>
+</body>
+</html>
